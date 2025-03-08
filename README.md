@@ -1,4 +1,4 @@
-# Solução GrpcMsg - Cliente e Servidor
+# GrpcMsg - Cliente e Servidor
 
 Solução de cliente e servidor gRPC desenvolvido em C#. O servidor disponibiliza dois serviços gRPC: um serviço de saudação e um serviço para envio de dados do usuário. O cliente se conecta ao servidor e realiza chamadas gRPC para esses serviços.
 
