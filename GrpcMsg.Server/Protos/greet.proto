@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "ProjetoGrpc";
+
+package greet;
+
+//Definição do greet service
+service Greeter {
+  // Enviando
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+// Request
+message HelloRequest {
+  string name = 1;
+}
+
+// Response
+message HelloReply {
+  string message = 1;
+}
