@@ -58,8 +58,3 @@ O projeto é composto por duas partes principais:
      ```
 
    - O cliente fará chamadas para o servidor gRPC e exibirá as respostas.
-
-### 3. Verificando a Saída
-
-Quando o cliente for executado, você verá algo similar a isto:
-
