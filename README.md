@@ -28,12 +28,20 @@ Ideal para desenvolvedores que querem:
 ## 🧩 Estrutura do Projeto
 
 graph TD
-    A[GrpcMsg] --> B[Protos]
-    A --> C[Server]
-    A --> D[Client]
-    A --> E[Shared]
-    A --> F[Program.cs - Server]
-    A --> G[Program.cs - Client]
+    A[GrpcMsg]
+    B[Protos]
+    C[Server]
+    D[Client]
+    E[Shared]
+    F[Program.cs - Server]
+    G[Program.cs - Client]
+
+    A --> B
+    A --> C
+    A --> D
+    A --> E
+    A --> F
+    A --> G
 
 **Descrição das pastas:**
 
