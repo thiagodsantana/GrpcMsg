@@ -2,10 +2,11 @@
 
 > Projeto base que demonstra integração com gRPC em .NET, com exemplos de mensagens, serviços e comunicação entre microserviços.
 
-![.NET](https://img.shields.io/badge/.NET‑8.0‑blueviolet?logo=dotnet)
-![CSharp](https://img.shields.io/badge/C%23‑100%25‑blue?logo=csharp)
-![Status](https://img.shields.io/badge/Status‑Ativo‑success)
-![License](https://img.shields.io/badge/Licença‑MIT‑blue)
+![.NET](https://img.shields.io/badge/.NET-8.0-blueviolet?logo=dotnet)
+![C#](https://img.shields.io/badge/C%23-100%25-blue?logo=csharp)
+![Status](https://img.shields.io/badge/Status-Ativo-success)
+![License](https://img.shields.io/badge/Licença-MIT-blue)
+
 
 ---
 
