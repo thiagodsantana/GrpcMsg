@@ -1,6 +1,6 @@
 # 📘 GrpcMsg
 
-> Projeto base que demonstra integração com gRPC em .NET, com exemplos de mensagens, Serviços e comunicação entre microserviços.
+> Projeto base que demonstra integração com gRPC em .NET, com exemplos de mensagens, serviços e comunicação entre microserviços.
 
 ![.NET](https://img.shields.io/badge/.NET‑8.0‑blueviolet?logo=dotnet)
 ![CSharp](https://img.shields.io/badge/C%23‑100%25‑blue?logo=csharp)
@@ -11,22 +11,23 @@
 
 ## 📖 Visão Geral
 
-O projeto GrpcMsg tem como objetivo:
+O **GrpcMsg** tem como objetivo:
 
 * Demonstrar como utilizar gRPC em projetos .NET para comunicação eficiente entre serviços.
-* Mostrar casos de uso práticos de mensagens, streams, contratos `.proto`, e geração de código servidor/cliente.
-* Servir de base para arquiteturas de microsserviços ou integrações de backend onde o desempenho e o design de APIs importam.
+* Apresentar casos práticos de mensagens, streams, contratos `.proto` e geração de código servidor/cliente.
+* Servir como base para arquiteturas de microsserviços ou integrações de backend em que desempenho e design de APIs são críticos.
 
-Ideal para desenvolvedores que querem:
+Ideal para desenvolvedores que desejam:
 
-* Entender como configurar e usar gRPC em .NET
-* Migrar ou construir serviços que usam RPC em vez de apenas REST
-* Ter um “template” de projeto pronto para comunicação entre microsserviços
+* Entender como configurar e usar gRPC em .NET;
+* Migrar ou construir serviços que utilizam RPC em vez de apenas REST;
+* Ter um “template” pronto para comunicação entre microsserviços.
 
 ---
 
 ## 🧩 Estrutura do Projeto
 
+```mermaid
 graph TD
     A[GrpcMsg]
     B[Protos]
@@ -42,91 +43,97 @@ graph TD
     A --> E
     A --> F
     A --> G
+```
 
 **Descrição das pastas:**
 
-* `Protos` → arquivos `.proto` que definem as mensagens e serviços gRPC
-* `Server` → implementação do servidor gRPC que expõe os serviços
-* `Client` → implementação de um cliente gRPC que consome os serviços
-* `Shared` → contratos comuns, modelos e utilitários reutilizados entre servidor/cliente
+* `Protos` → Arquivos `.proto` que definem mensagens e serviços gRPC.
+* `Server` → Implementação do servidor gRPC que expõe os serviços.
+* `Client` → Implementação de um cliente gRPC que consome os serviços.
+* `Shared` → Contratos, modelos e utilitários reutilizáveis entre servidor e cliente.
 
 ---
 
 ## 🧪 Tecnologias Utilizadas
 
-* **.NET 8** — Plataforma moderna e performática para backend
-* **gRPC** — Framework RPC open‑source de alto desempenho (potencialmente via HTTP/2)
-* **Protocol Buffers (.proto)** — Definições de tipos de mensagem e serviço, geração de stubs
-* **C#** — Linguagem principal de implementação
-* Projeto de referência para comunicação eficiente entre componentes distribuídos
+* **.NET 8** — Plataforma moderna e performática para backend.
+* **gRPC** — Framework RPC open‑source de alto desempenho via HTTP/2.
+* **Protocol Buffers (.proto)** — Definição de tipos de mensagem e serviço, geração de stubs.
+* **C#** — Linguagem principal de implementação.
+
+Este projeto serve como referência para comunicação eficiente entre componentes distribuídos.
 
 ---
 
 ## ⚙️ Pré‑requisitos
 
-Antes de executar o projeto localmente, garanta que você tem:
+Antes de executar o projeto localmente, garanta que você tenha:
 
 * ✅ [Visual Studio 2022](https://visualstudio.microsoft.com/) ou [VS Code](https://code.visualstudio.com/)
 * ✅ [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
-* ✅ Familiaridade básica com C# e com o conceito de Serviços, Cliente/Servidor
-* ✅ (Opcional) Familiaridade com Protocol Buffers e geração de código
+* ✅ Familiaridade básica com C# e arquitetura Cliente/Servidor
+* ✅ (Opcional) Conhecimento em Protocol Buffers e geração de código
 
 ---
 
 ## 🚀 Como Executar Localmente
 
-1. Clone este repositório:
+1. Clone o repositório:
 
-   ```bash
-   git clone https://github.com/thiagodsantana/GrpcMsg.git
-   cd GrpcMsg
-   ```
-2. Abra as soluções ou projetos servidor e cliente na sua IDE preferida.
+```bash
+git clone https://github.com/thiagodsantana/GrpcMsg.git
+cd GrpcMsg
+```
+
+2. Abra os projetos **Server** e **Client** na sua IDE.
 3. Execute primeiro o **Server**, depois o **Client**.
-4. Observe os logs de requisição/resposta no cliente e no servidor para verificar a comunicação gRPC funcionando.
+4. Observe os logs de requisição/resposta para verificar a comunicação gRPC.
 5. Explore os arquivos `.proto` na pasta `Protos` para entender os contratos de serviço e mensagem.
 
 ---
 
 ## 💡 Objetivo Educacional
 
-Este projeto serve para:
+Este projeto é ideal para:
 
-* Fornecer uma base de estudo prática sobre gRPC e comunicação eficiente entre microserviços.
-* Servir como template para times que desejam adotar RPC em projetos .NET.
-* Facilitar workshops internos ou treinamentos sobre arquitetura distribuída, contratos fortes e serialização eficiente.
+* Fornecer uma base prática de estudo sobre gRPC e comunicação eficiente entre microsserviços.
+* Servir como template para equipes que desejam adotar RPC em projetos .NET.
+* Facilitar workshops ou treinamentos sobre arquitetura distribuída, contratos fortes e serialização eficiente.
 
 ---
 
 ## 📚 Boas Práticas e Recomendações
 
-* Use arquivos `.proto` bem definidos para separar contratos de implementação.
-* Evite transportar cargas pesadas sem necessidade — gRPC + Protocol Buffers ajudam na serialização eficiente.
-* Lembre‑se de configurar corretamente **HTTP/2**, autenticação/autorização e **interceptors** (se necessário) em um cenário de produção.
-* Logue e monitore chamadas gRPC, incluindo latência e erros — em runtime distribuído isso importa muito.
-* Considere fallback ou compatibilidade para clientes REST se houver interoperabilidade necessária.
+* Separe bem os contratos `.proto` da implementação.
+* Evite transportar cargas grandes desnecessárias — gRPC + Protocol Buffers são eficientes na serialização.
+* Configure **HTTP/2**, autenticação/autorização e **interceptors** adequadamente em produção.
+* Monitore e registre chamadas gRPC, latência e erros — essencial em ambientes distribuídos.
+* Considere fallback ou interoperabilidade com REST se necessário.
 
 ---
 
 ## 🤝 Contribuindo
 
-1. Faça um *fork* deste repositório.
-2. Crie uma branch:
+1. Faça um *fork* do repositório.
+2. Crie uma branch para sua feature:
 
-   ```bash
-   git checkout ‑b feature/nova‑funcionalidade
-   ```
-3. Adicione exemplos (por exemplo: streaming, bidirecional, interceptors, autenticação) ou melhorias.
-4. Faça commit:
+```bash
+git checkout -b feature/nova-funcionalidade
+```
 
-   ```bash
-   git commit ‑m "Adiciona funcionalidade X ao exemplo gRPC"
-   ```
+3. Adicione melhorias, como streaming, interceptors ou autenticação.
+4. Faça commit das alterações:
+
+```bash
+git commit -m "Adiciona funcionalidade X ao exemplo gRPC"
+```
+
 5. Envie para o seu fork:
 
-   ```bash
-   git push origin feature/nova‑funcionalidade
-   ```
+```bash
+git push origin feature/nova-funcionalidade
+```
+
 6. Abra um Pull Request para revisão e eventual merge.
 
 ---
@@ -141,4 +148,4 @@ Este projeto está sob a **Licença MIT** — livre para uso, estudo e modifica�
 
 **Autor:** [Thiago D. Santana](https://github.com/thiagodsantana)
 **LinkedIn:** [linkedin.com/in/thiagodsantana](https://linkedin.com/in/thiagodsantana)
-**E‑mail:** [thiago.darley@gmail.com](mailto:thiago.darley@gmail.com)
+**E-mail:** [thiago.darley@gmail.com](mailto:thiago.darley@gmail.com)
