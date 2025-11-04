@@ -32,8 +32,8 @@ graph TD
     A --> C[Server]
     A --> D[Client]
     A --> E[Shared]
-    A --> F[Program.cs Server]
-    A --> G[Program.cs Client]
+    A --> F[Program.cs - Server]
+    A --> G[Program.cs - Client]
 
 **Descrição das pastas:**
 
